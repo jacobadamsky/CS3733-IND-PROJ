@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\boundary",
+    "\\src\\controller",
+    "\\src\\model"
+  ],
+  "SelectedNode": "\\src\\model\\Model.js",
+  "PreviewInSolutionExplorer": false
+}

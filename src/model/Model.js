@@ -50,7 +50,7 @@ export class Puzzle {
 
         this.cells = []
         for (let r = 0; r < nr; r++) {
-            this.cells[r] = [];
+            this.cells[r] = []
             for (let c = 0; c < nc; c++) {
                 this.cells[r][c] = new Cell(r, c, 'green', 0)
             }

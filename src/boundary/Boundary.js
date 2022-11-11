@@ -2,8 +2,8 @@
 import { setPickup } from '../App.js'
 import { Coordinate } from '../model/Model'
 
-var BOXSIZE = 100;
-const OFFSET = 8;
+var BOXSIZE = 100
+const OFFSET = 8
 
 export class Square {
     constructor(x, y, size) {
@@ -18,8 +18,8 @@ export function computeSquare(cell) {
 }
 
 export function redrawCanvas(model, canvasObj) {
-    const ctx = canvasObj.getContext('2d');
-    ctx.clearRect(0, 0, canvasObj.width, canvasObj.height);
+    const ctx = canvasObj.getContext('2d')
+    ctx.clearRect(0, 0, canvasObj.width, canvasObj.height)
     ctx.font = '30px serif'
     ctx.fillStyle = 'black'
     ctx.fillText(model.moves, 960, 380)
@@ -49,7 +49,7 @@ export function redrawCanvas(model, canvasObj) {
                     ctx.rect(sq.x, sq.y, sq.size, sq.size)
                     ctx.fill()
                     ctx.stroke()
-                    continue;
+                    continue
                 case 1:
                     ctx.fillStyle = cell.color
                     ctx.beginPath()
@@ -61,14 +61,14 @@ export function redrawCanvas(model, canvasObj) {
                     ctx.rect(sq.x + sq.size * .25, sq.y + sq.size * .25, sq.size * .5, sq.size * .5)
                     ctx.fill()
                     ctx.stroke()
-                    continue;
+                    continue
                 case 2:
                     ctx.fillStyle = 'black'
                     ctx.beginPath()
                     ctx.rect(sq.x, sq.y, sq.size, sq.size)
                     ctx.fill()
                     ctx.stroke()
-                    continue;
+                    continue
                 case 3:
                     ctx.fillStyle = 'gray'
                     ctx.beginPath()
@@ -80,9 +80,9 @@ export function redrawCanvas(model, canvasObj) {
                     ctx.rect(sq.x + sq.size * .25, sq.y + sq.size * .25, sq.size * .5, sq.size * .5)
                     ctx.fill()
                     ctx.stroke()
-                    continue;
+                    continue
                 default:
-                    continue;
+                    continue
             }
         }
     }
@@ -107,7 +107,7 @@ export function redrawCanvas(model, canvasObj) {
             ctx.fillStyle = 'purple'
             ctx.rect(15 + 50 * nc / 2, OFFSET * 2 * nr + BOXSIZE * nr - 30, 220, 40)
             ctx.fill()
-            ctx.stroke();
+            ctx.stroke()
             ctx.fillStyle = 'black'
             ctx.fillText("Level Complete!", 25 + 50 * nc / 2, OFFSET * 2 * nr + BOXSIZE * nr, 200)
         }
